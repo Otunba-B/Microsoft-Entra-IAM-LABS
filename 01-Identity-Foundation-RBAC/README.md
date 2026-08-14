@@ -167,11 +167,30 @@ Department and role information establishes a foundation for future Joiner-Mover
 Screenshots in this project demonstrate:
 
 * Entra user objects
+  ### Entra User Identity
+  The following user object demonstrates an employee identity configured with organizational attributes used for identity administration.
+  ![Entra user identity](screenshots/alice-johnson-user-object.png)
 * Department and role-based security groups
+  ### Department Security Groups
+  Security groups organize identities according to business function and provide a foundation for scalable authorization.
+  ![Security groups](screenshots/chimahealth-security-groups.png)
 * Security group membership
+  ### Finance Group Membership
+  The Finance employee identity is assigned to the appropriate departmental security group rather than having departmental access modeled
+  directly on the individual identity.
+  ![Finance group membership](screenshots/finance-group-membership.png)
 * Helpdesk Administrator assignment
+  ### Help Desk Delegation
+  The Help Desk Analyst was assigned the Helpdesk Administrator role instead of broader administrative privileges.
+  ![Helpdesk Administrator](screenshots/helpdesk-administrator-assignment.png)
 * User Administrator assignment
+  ### IAM Administration
+  The IAM Analyst was assigned User Administrator rather than Global Administrator, demonstrating least-privilege administrative delegation.
+  ![User Administrator](screenshots/iam-user-administrator-assignment.png)
 * Security Reader assignment
+  ### Security Visibility
+  The Security Engineer was assigned Security Reader, providing security visibility without unnecessary write privileges.
+  ![Security Reader](screenshots/security-reader-assignment.png)
 
 Sensitive credentials, authentication information, and unnecessary tenant identifiers are excluded from the repository.
 
