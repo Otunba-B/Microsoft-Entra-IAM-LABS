@@ -89,7 +89,6 @@ Automate identity administration using Microsoft Graph and PowerShell.
 * Microsoft Certified: Security, Compliance, and Identity Fundamentals [SC-900]
 * Microsoft Certified: Azure Fundamentals
 * Google: Technical Support Fundamentals
-* ISC2: Certified in Cybersecurity
 * LinkedIn Learning: Artificial Intelligence for Cybersecurity
 * LinkedIn Learning: Prompt Engineering - How to Talk to the AIs
 * Microsoft & LinkedIn - Career Essentials in Generative AI by Microsoft and LinkedIn
