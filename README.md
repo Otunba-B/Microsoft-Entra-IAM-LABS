@@ -33,9 +33,11 @@ Implemented the foundational Entra ID environment including fictional enterprise
 
 ### 02 — MFA & Authentication
 
-**Status:** Planned
+**Status:** Completed
 
 Configure and test stronger authentication controls for enterprise identities.
+
+[View Lab 02](./02-Authentication-Methods/)
 
 ### 03 — Conditional Access
 
