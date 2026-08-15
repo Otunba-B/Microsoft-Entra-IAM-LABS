@@ -85,7 +85,7 @@ Automate identity administration using Microsoft Graph and PowerShell.
 * CompTIA Security+
 * ISC2: Certified in Cybersecurity
 * AWS Certified Solutions Architect - Associate
-* Microsoft Certified: Identity and Access Administrator Associate [SC-300](in view)
+* Microsoft Certified: Identity and Access Administrator Associate [SC-300](in progress)
 * Microsoft Certified: Security, Compliance, and Identity Fundamentals [SC-900]
 * Microsoft Certified: Azure Fundamentals
 * Google: Technical Support Fundamentals
