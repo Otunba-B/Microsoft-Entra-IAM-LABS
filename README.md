@@ -41,9 +41,11 @@ Configure and test stronger authentication controls for enterprise identities.
 
 ### 03 — Conditional Access
 
-**Status:** Planned
+**Status:** Completed
 
 Design, test, and implement risk-based access policies using Microsoft Entra Conditional Access.
+
+[View Lab 03](./03-Conditional-Access-MFA/)
 
 ### 04 — Joiner-Mover-Leaver Lifecycle
 
