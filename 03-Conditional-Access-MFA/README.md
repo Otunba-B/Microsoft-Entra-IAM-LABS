@@ -280,16 +280,9 @@ The implementation was validated through actual authentication testing and sign-
 
 ## Lessons Learned
 
-Complete this section in your own words.
-
-Consider:
-
-* Why registering an MFA method does not necessarily enforce MFA
-* How Conditional Access changes authentication requirements
-* Why Report-only mode is useful before enabling a policy
-* What the What If tool contributes to policy testing
-* Why sign-in logs are necessary for validating the effectiveness of an IAM control
-* Why deploying to a pilot group reduces operational risk
+- I learnt of the massive contribution what if tool contributes to policy testing. With the tool I was able to test the behavior of the policy       without disrupting the user's flow.
+- In the same breadth the report only was valuable and I learnt how to use it to observe a policy behavior before it is deployed, also the          importance and usefulness of deploying to pilot groups to reduce operational risk
+- This lab reinforced the importance of sign in logs and how necessary they are for validating the effectiveness of IAM controls providing basic    info as well as conditional access and authentication details. 
 
 ---
 
