@@ -49,9 +49,11 @@ Design, test, and implement risk-based access policies using Microsoft Entra Con
 
 ### 04 — Joiner-Mover-Leaver Lifecycle
 
-**Status:** Planned
+**Status:** Completed
 
 Model identity provisioning, role transitions, access changes, and offboarding.
+
+[View Lab 04](./04-Joiner-Mover-Leaver/)
 
 ### 05 — Enterprise SSO
 
