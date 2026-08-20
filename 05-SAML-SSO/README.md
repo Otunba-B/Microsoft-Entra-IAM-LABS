@@ -21,68 +21,52 @@ I also tested access with an unassigned user to verify that unauthorized users w
 
 ## Architecture
 
+```text
 **Alice requests access to the enterprise application
-
         ↓
 Application redirects Alice to Microsoft Entra ID
-
         ↓
 Entra ID authenticates Alice
 "Is this really Alice?"
-
         ↓
 Entra ID checks application assignment
 "Is Alice authorized to use this application?"
-
         ↓
 Alice is a member of GRP-APP-SSO-Pilot
-
         ↓
 Authorization succeeds
-
         ↓
 Entra ID creates and cryptographically signs
 a SAML response containing Alice's identity claims
-
         ↓
 SAML response is sent to the application's Assertion Customer Service URL
-
         ↓
 Application validates the SAML response
-
         ↓
 Application identifies Alice from the NameID/claims
-
         ↓
 Application creates an authenticated session
-
         ↓
 ACCESS GRANTED**
-
+```
 
 For the negative version with user Rachel,
-
+```text
 Rachel requests application
-
         ↓
 Entra authenticates Rachel
-
         ↓
 Entra checks application assignment
-
         ↓
 Rachel is not assigned directly
 and is not in GRP-APP-SSO-Pilot
-
         ↓
 Authorization fails
-
         ↓
 AADSTS50105
-
         ↓
 ACCESS DENIED
-
+```
 
 
 ## Configuration
@@ -97,6 +81,8 @@ ACCESS DENIED
 - Verified that **NameID** used `user.userprincipalname` in Email Address format so the application could identify the authenticated Entra user using their UPN.
 - Configured the SAML signing certificate so the Service Provider could verify the authenticity and integrity of SAML messages issued by Entra ID.
 
+![App Group Assignment](screenshots/app-group-assignment.png)
+
 ## Testing
 
 ### Positive Test – Authorized User
@@ -107,6 +93,8 @@ Entra authenticated and authorized Alice, generated the SAML response, and the a
 
 This confirmed that group-based application assignment and SAML SSO were functioning as expected.
 
+![Alice App Sign In](screenshots/alice-sso-success.png)
+
 ### Negative Test – Unauthorized User
 
 For the negative test, I used Rachel. Rachel had a valid Entra ID account but was not a member of `GRP-APP-SSO-Pilot` and had not been directly assigned to the enterprise application.
@@ -115,6 +103,7 @@ I expected Rachel to be denied access. Her sign-in attempt failed with `AADSTS50
 This confirmed that a valid identity and successful identification by Entra ID do not automatically provide authorization to an application. 
 Application access was controlled through assignment and group membership.
 
+![Rachel Failed Sign In Log](screenshots/rachel-50105-signin-log.png)
 
 ## Troubleshooting
 
@@ -150,6 +139,8 @@ Claims carry information about the authenticated user's identity from Entra ID t
 
 The NameID identifies the user to the application. In this lab, `user.userprincipalname` was used as the NameID so the SAML Toolkit could identify the 
 corresponding user using their Entra UPN.
+
+![SAML basic Configuration](screenshots/saml-basic-configuration.png)
 
 ### SAML Signing Certificate
 
