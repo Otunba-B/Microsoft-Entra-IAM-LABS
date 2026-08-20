@@ -22,29 +22,40 @@ I also tested access with an unassigned user to verify that unauthorized users w
 ## Architecture
 
 **Alice requests access to the enterprise application
+
         ↓
 Application redirects Alice to Microsoft Entra ID
+
         ↓
 Entra ID authenticates Alice
 "Is this really Alice?"
+
         ↓
 Entra ID checks application assignment
 "Is Alice authorized to use this application?"
+
         ↓
 Alice is a member of GRP-APP-SSO-Pilot
+
         ↓
 Authorization succeeds
+
         ↓
 Entra ID creates and cryptographically signs
 a SAML response containing Alice's identity claims
+
         ↓
 SAML response is sent to the application's Assertion Customer Service URL
+
         ↓
 Application validates the SAML response
+
         ↓
 Application identifies Alice from the NameID/claims
+
         ↓
 Application creates an authenticated session
+
         ↓
 ACCESS GRANTED**
 
@@ -52,17 +63,23 @@ ACCESS GRANTED**
 For the negative version with user Rachel,
 
 Rachel requests application
+
         ↓
 Entra authenticates Rachel
+
         ↓
 Entra checks application assignment
+
         ↓
 Rachel is not assigned directly
 and is not in GRP-APP-SSO-Pilot
+
         ↓
 Authorization fails
+
         ↓
 AADSTS50105
+
         ↓
 ACCESS DENIED
 
